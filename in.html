@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:left;">Датчик вибрации</h1>
+    <table " border="1" cellspacing="10" cellpadding="0">
+<tr> <td height="150px"width="250px"   > <img src="http://scrumpoker.eu/wp-content/uploads/2019/04/modul-ky-002-datchik.jpg"alt=""width="500" height="600">  </td>   <td  height="150px"width="250px" > <img src="http://scrumpoker.eu/wp-content/uploads/2019/04/shema-podklju4enija.jpg"alt="" width="500" height="600"> </td>        </tr>
+<tr> <td colspan="2" height="50px"width="500px">Краткое описание модуля:Датчики вибрации Ардуино применимы для выявления внешних воздействия вибрационного характера</br>
+и широко используются в противоугонных автомобильных системах, различных охранных сигнализациях, </br>
+позволяют детектировать вибрации при начинающемся землетрясении. 
+
+</td></tr>
+<tr> <td colspan="2"height="200px"width="500px" >Код программы:</br> 
+    #define PIN_LED 13</br>     
+
+    #define PIN_SENSOR 2 // Пин,которому присоединен датчик вибрации</br>  
+    
+    void setup() {</br>  
+    
+    pinMode(PIN_LED, OUTPUT);</br>  
+    
+    }</br>  
+    
+    void loop() { </br>  
+    
+    int val = digitalRead(PIN_SENSOR); // Считываем значение с датчика</br>  
+    
+    if(val==1){</br>  
+    
+    digitalWrite(PIN_LED, HIGH); // Датчик сработал – включаем светодиод</br>  
+    
+    }else{</br>  
+    
+    digitalWrite(PIN_LED, LOW);</br>  
+    
+    }</br>  
+    
+    }</td></tr>
+<tr> <td colspan="2"height="50px"width="500px"><a href="https://arduinomaster.ru/datchiki-arduino/datchik-vibratsii-arduino/"><h4>Источник1</h4></a>
+<a href="http://scrumpoker.eu/%d1%81%d0%bf%d0%b5%d1%86%d0%b8%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d1%8b/arduino/%d0%b1%d0%b8%d0%b1%d0%bb%d0%b8%d0%be%d1%82%d0%b5%d0%ba%d0%b0-%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b5%d0%b9-arduino/%d0%b4%d0%b0%d1%82%d1%87%d0%b8%d0%ba-%d0%b2%d0%b8%d0%b1%d1%80%d0%b0%d1%86%d0%b8%d0%b8/"><h4>Источник2</h4></a>
+</td>
+
+
+</table>
+<h1 style="text-align:left;">Датчик для избегания препятствий KY-032</h1>
+<table " border="1" cellspacing="10" cellpadding="0">
+<tr> <td height="150px"width="250px"   > <img src="http://scrumpoker.eu/arduino/img/AvoidanceSensor1.jpg"alt=""width="500" height="600">  </td>   <td  height="150px"width="250px" > <img src="http://scrumpoker.eu/arduino/img/AvoidanceSensor5.jpg"alt="" width="500" height="600"> </td>        </tr>
+<tr> <td colspan="2" height="50px"width="500px">Краткое описание модуля:“KY-032” – модуль представляет собой инфракрасный датчик обнаружения препятствий.</br> 
+Устройство имеет передатчик(IR LED), излучающий инфракрасный луч частотой 38 кГц,</br>
+который принимается приемником(IR receiver) на плате. При приближении какого-либо предмета к сенсору </br>
+(близость регулируется потенциометром) на выходе,“OUT” появляется низкий уровень напряжения и включается светодиод на плате модуля.
+
+
+</td></tr>
+<tr> <td colspan="2"height="200px"width="500px" >Код программы:</br> 
+digitalWrite( enablePin, HIGH);     //Включить внутренний сигнал 38 кГц</br> 
+microDelay( 210);                   //Задержка 210µs(8 пульсов по 38kHz)</br> 
+if( digitalRead( outputPin))        //Если Output детектора равен HIGH</br> 
+{</br> 
+objectDetect = false;           //Препятсвия не было найдено</br> 
+}</br> 
+else                                //Но если Output равен LOW,</br> 
+{</br> 
+microDelay( 395);               //Опять ждать 15 пульсов</br> 
+if( digitalRead( outputPin))    //Если Output теперь равен HIGH</br> 
+    {</br> 
+objectDetect = false;       //Препятсвия не было найдено</br> 
+    }</br> 
+     else                            //Если Output до сих пор LOW</br> 
+    {</br> 
+objectDetect = true;        //Препятсвие било обнаружено</br> 
+    }</br> 
+}</br> 
+digitalWrite( enablePin, LOW);      //Выключить внутренний сигнал 38kHz</br> 
+
+
+
+</td></tr>
+<tr> <td colspan="2"height="50px"width="500px"><a href="http://scrumpoker.eu/arduino/avoidanceSensor.php"><h4>Источник</h4></a>
+</td>
+
+
+</table>
+<h1 style="text-align:left;">KY-018 Фоторезистор</h1>
+<table " border="1" cellspacing="10" cellpadding="0">
+<tr> <td height="150px"width="250px"   > <img src="http://scrumpoker.eu/arduino/img/photo11.jpg"alt=""width="500" height="600">  </td>   <td  height="150px"width="250px" > <img src="http://scrumpoker.eu/arduino/img/photo5.jpg"alt="" width="500" height="600"> </td>        </tr>
+<tr> <td colspan="2" height="50px"width="500px">Краткое описание модуля:“KY-018″ — модуль содержит фоторезистор (датчик освещенности),</br> 
+ который может применяться для измерения интенсивности света или определения его наличия/отсутствия. </br> 
+ При отсутствии света сопротивление фоторезистора большое и доходит до 1 мОм, а при его освещении падает до нескольких Ом.</br> 
+
+</td></tr>
+<tr> <td colspan="2"height="200px"width="500px" >Код программы:</br> 
+    int sensorPin = 2; //define analog pin 2</br> 
+    int value = 0;</br> 
+    void setup() {</br> 
+        Serial.begin(9600);</br> 
+    }</br> 
+    void loop() {</br> 
+        value = analogRead(sensorPin);</br> 
+        Serial.println(value, DEC); // light intensity</br> 
+        // high values for bright environment</br> 
+        // low values for dark environment</br> 
+        delay(100);</br> 
+    }
+
+
+</td></tr>
+<tr> <td colspan="2"height="50px"width="500px"><a href="http://scrumpoker.eu/arduino/photoresistor.php"><h4>Источник</h4></a>
+</td>
+
+
+</table>
+</body>
+</html>
