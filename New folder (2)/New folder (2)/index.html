@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+img{width:150px;left:200px;top:150px;position:absolute;}  
+</style>
+<script language="javascript">
+flyX=0;
+flyY=0;
+dX=5;
+dY=4;
+    function dragonfly(){
+        document.getElementById("fly").style.left=flyX+"px";
+        document.getElementById("fly").style.top=flyY+"px";
+        flyX+=dX;
+        flyY+=dY;
+        if(flyX>800){flyX=800;dX*=-1;}
+        if(flyX<0){flyX=0;dX*=-1;}
+        if(flyY>600){flyY=600;dY*=-1;}
+        if(flyY<0){flyY=0;dY*=-1;}
+        
+        setTimeout("dragonfly()",20);
+    }
+
+</script>
+</head>
+</html>
+<body onload="dragonfly()">
+    <img src="fly.jpg" id="fly"/>
+</body>
