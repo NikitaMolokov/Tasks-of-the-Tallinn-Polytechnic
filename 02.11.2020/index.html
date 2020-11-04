@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anketa</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script language="javascript">
+  function zero_first_format(value)
+{
+    if (value < 10)
+    {
+        value='0'+value;
+    }
+    return value;
+}
+
+function dateNowMax(gde)
+{
+    var current_datetime = new Date();
+    var day = zero_first_format(current_datetime.getDate());
+    var month = zero_first_format(current_datetime.getMonth()+1);
+    var year = current_datetime.getFullYear();
+
+    var data = year+"-"+month+"-"+day;
+    gde.max = data;
+}
+
+function dateNowMin(gde)
+{
+    var current_datetime = new Date();
+    var day = zero_first_format(current_datetime.getDate());
+    var month = zero_first_format(current_datetime.getMonth()+1);
+    var year = current_datetime.getFullYear();
+
+    var data = year+"-"+month+"-"+day;
+    gde.min = data;
+}
+function zero_first_format(value)
+  {
+      if (value < 10)
+      {
+          value='0'+value;
+      }
+      return value;
+  }
+  
+  function dateNow(gde)
+  {
+      var current_datetime = new Date();
+      var day = zero_first_format(current_datetime.getDate());
+      var month = zero_first_format(current_datetime.getMonth()+1);
+      var year = current_datetime.getFullYear();
+  
+      var data = year+"-"+month+"-"+day;
+
+      gde.max = data;
+  }</script>
+</head>
+<body>
+    <label>Фамилия</label></br>
+    <input type="text"id="aname"name="aname" placeholder="Ваша Фамилия"></br>
+    <label>Имя</label></br>
+    <input type="text"id="oname"name="oname"placeholder="Ваше Имя"></br>
+    <label for="ID">Персональный код</label></br>
+    <input type="text" name="ID" id="ID" placeholder="33210852348"/></br>
+    <label>Дата рождения </label></br>
+    <input type="date" name="dateBirth" id="dateBirth" min="1910-01-01" onmouseover="dateNow(this)"/></br>
+    <label>Пол</label></br>
+    <input type="radio" name="gender" value="male"> Мужчина
+    <input type="radio" name="gender" value="female"> Женщина
+    <input type="radio" name="gender" value="unknown" > Другое
+    <p>Есть 18?</p>
+<input type="checkbox" name="ssss" value="ssss"> Да
+
+<form action="/action_page.php">
+  <label for=pro>Выбор варианта предоставляемого товара</label></br>
+  <select name="pro" id="pro">
+      <option value="dot">Товар1</option>
+      <option value="dot">Товар2</option>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+<form action="/action_page.php">
+    <label for=pro>Выбор варианта доставки </label></br>
+    <select name="pro" id="pro">
+        <option value="dot">прислать по почте</option>
+        <option value="dot">заберу из почтового автомата</option>
+        <option value="dot">заберу сам из представительства</option>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <form action="/action_page.php">
+    <label for=pro>Выбор варианта почтового автомата доставки  </label></br>
+    <select name="pro" id="pro">
+        <option value="dot">Antsla Konsumi pakiautomaat	Põllu 15,Antsla,Võrumaa</option>
+        <option value="dot">Kiviõli Grossi pakiautomaat Keskpuiestee 33,Kiviõli,Ida-Virumaa</option>
+        <option value="dot">Kiviõli Maxima pakiautomaat	Viru 5,Kiviõli,Ida-Virumaa</option>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <label>Указать адрес доставки и почтовый индекс</label></br>
+  <input type="text"id="snamex"name="snamex" placeholder="Valge 13">
+  <input type="text"id="datebirthx"name="datebirthx" placeholder="11415" ></br>
+  <label>Выбор даты начала периода получения товара  </label></br>
+  <input type="date" name="dostavkaDataN" id="dostavkaDataN" onmouseover="dateNowMin(this)"/></br>
+    <form>
+      <p>Выбор времени начала периода получения товара</p>
+      <p><input type="time" name="cron" value="00:00" min="00:00  " max="23:59"></p>
+     </form>
+     <label>Выбор даты конца периода получения товара  </label></br>
+     <input type="date" name="dostavkaDataK" id="dostavkaDataK" onmouseover="dateNowMin(this)"/></br>
+     <form>
+      <p>Выбор времени конца периода получения товара</p>
+      <p><input type="time" name="cron" value="00:00" min="00:00 " max="23:59"></p>
+     </form>
+     <label for="mail">Адрес электронной почты</label></br>
+     <input type="email" name="mail" id="mail" placeholder="username@example.org"/></br>
+     <label for="telefon">Номер телефона с кодом</label></br>
+     <input type="tel" name="tel" pattern="+[0-9]{3}-[0-9]{8}" title="+372 5396794" placeholder="+372 5466784"/></br>
+     <label for="mailD">Дополнительный адрес электронной почты</label></br>
+     <input type="email" name="mail" id="mail" placeholder="username@example.org"/></br>
+     <label for="soglasije">Согласие с правилами предоставления услуги</label></br>
+     <input type="checkbox" name="soglasije" id="soglasije"/></br>
+     <input type="submit"/></br>
+
+<script language="javascript" scr="js/jquery-3.5.1.slim.min.js"></script>
+<script language="javascript" scr="js/popper.min.js"></script>
+<script language="javascript" scr="js/bootstrap.min.js"></script>
+</body>
+</html>
