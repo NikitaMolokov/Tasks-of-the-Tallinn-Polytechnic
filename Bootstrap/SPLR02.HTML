@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap page</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div class="page">
+    <header class="header">
+    
+          
+
+    
+    <div class="row ">
+        <div class="col-12">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand">Каталог</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.php">Главная страница <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR01.php">Первый набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR02.HTML">Второй набор<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR03.HTML">Третий набор  <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR04.HTML">Четвертый набор  <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR07.HTML">Пятый набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR08.HTML">Шестой набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Седьмой набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Восьмой набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Девятый набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Десятый набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Одиннадцатый набор <span class="sr-only">(current)</span></a>
+              </li>
+              
+              <li class="ROWS" >
+                <a class="nav-link" >Выбор языка <span class="sr-only">(current)</span></a>
+              </li>
+             
+              
+
+              <li  >
+              <select class="ROW"  id="language"aria-label="Default select example">
+        
+              <option value="RU"<?php echo $RU_select?>>RU</option>
+              <option value="EN"<?php echo $EN_select?>>EN</option>
+        
+
+              </select>
+              </li>
+              
+         
+     
+             
+           
+        
+             
+            </div>
+          </nav>
+     </div>
+    </div>
+    </header>
+    <main class="content">
+        <div>
+          <p class="font-weight-bold" >Состав набора</p>
+      
+            <img src="/A1.jpg" width="250px"height="250px"alt="..." class="rounded-left">
+            <img src="/A2.jpg" width="250px"height="250px" alt="..." class="rounded-left">
+            <img src="/A3.jpg" width="250px"height="250px"alt="..." class="rounded-left">     
+            <p class="font-weight-bold"style="float:right;" >
+                1. Название работы-Ультразвуковой дальномер и пассивный динамик</br>
+                1.1 Состав набора:HC-SR04, KY-006, Arduino Uno</br>
+                
+                2. Цель работы</br>
+                Целью работы является приобретение практических </br>
+                навыков измерения расстояния с помощью ультразвукового дальномера </br>
+                и генерации звуковых сигналов посредством динамика</br>
+                
+                3. Задачи работы:</br>
+                Ознакомиться с методами проведения измерений расстояния </br> 
+                с помощью ультразвукового дальномера HC-SR04.</br>
+                Ознакомиться со способами генерации звуковых импульсов</br> 
+                 с помощью пассивного динамика KY-006.</br>
+                Создать алгоритм работы программ в соответствии с заданиями пункта 6.</br>
+                Написать код программ по заданному алгоритму в пункте 3.</br></br></br>
+    
+    
+                6. Задания к лабораторным работам</br> 
+                ЗАДАНИЕ 2.1</br> 
+                Вывести в Serial monitor расстояние от ультразвукового</br> 
+                 датчика HC-SR04 до препятствия (рука, телефон, книга и т.п.) </br> 
+                 при получении сигнала от данного датчика. Расстояние выводить в сантиметрах.</br> 
+
+                ЗАДАНИЕ 2.2</br> 
+                Вывести в Serial monitor сообщение “Угроза столкновения!”, </br> 
+                если расстояние от препятствия до ультразвукового датчика HC-SR04 меньше 15см.</br> 
+
+                ЗАДАНИЕ 2.3</br> 
+                Подать звуковой сигнал произвольной тональности длительностью</br> 
+                 1 секунда через пассивный звуковой излучатель KY-006.</br> 
+
+                ЗАДАНИЕ 2.4</br> 
+                При приближении препятствия к ультразвуковому датчику HC-SR04 на расстояние</br> 
+                ближе 20 сантиметров из пассивного звукового излучателя KY-006 должен </br> 
+                зазвучать сигнал в виде трех последовательных звуков разной тональности</br> 
+                длительностью по 0.5 секунды каждый.</br> 
+                
+                
+                
+                
+                
+                
+                </p>  
+        </div>
+    
+       <div>
+         
+        <p class="font-weight-bold" >Схема подключения</p>
+        <img src="/Foto/2.png" width="800px"height="450px"alt="..." class="rounded-left"> 
+       </div>
+       
+
+
+    </main>
+    
+    <footer class="footer">
+
+      <div class="text-center p-3" >
+      
+        <a class="text-white" >© 2021 Copyright: Nikita Molokov</a>
+      </div>
+
+
+    </footer>
+
+
+ 
+
+
+</div>
+
+
+<!--//  Конец всего сайта  // -->
+</div>
+<script language="javascript" scr="js/jquery-3.5.1.slim.min.js"></script>
+<script language="javascript" scr="js/bootstrap.min.js"></script>
+<script language="javascript" scr="js/popper.min.js"></script>
+
+</body>
+</html>

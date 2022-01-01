@@ -1,0 +1,24 @@
+
+
+
+
+.page{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  margin-top:auto;
+  padding: 20px;
+  background-color:#00bfff
+}
+.ROWS{
+  position: absolute;
+  bottom: 20; right: 60px;
+}
+.ROW{
+  position: absolute;
+  bottom: 20; right: 0;
+}

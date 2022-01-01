@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap page</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div class="page">
+    <header class="header">
+    
+  
+    
+    <div class="row ">
+        <div class="col-12">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand">Каталог</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.php">Главная страница <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR01.php">Первый набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR02.HTML">Второй набор<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR03.HTML">Третий набор  <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR04.HTML">Четвертый набор  <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR07.HTML">Пятый набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="SPLR08.HTML">Шестой набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Седьмой набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Восьмой набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Девятый набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Десятый набор <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Одиннадцатый набор <span class="sr-only">(current)</span></a>
+              </li>
+              
+              <li class="ROWS">
+                <a class="nav-link" >Выбор языка <span class="sr-only">(current)</span></a>
+              </li>
+             
+              
+
+              <li  >
+              <select class="ROW" id="language"aria-label="Default select example">
+        
+              <option value="RU"<?php echo $RU_select?>>RU</option>
+              <option value="EN"<?php echo $EN_select?>>EN</option>
+        
+
+              </select>
+              </li>
+              
+         
+     
+             
+           
+   
+             
+            </div>
+          </nav>
+     </div>
+    </div>
+    </header>
+    <main class="content">
+        <div>
+            <p class="font-weight-bold" >Состав набора</p>
+            <img src="/D1.jpg" width="250px"height="250px"alt="..." class="rounded-left">
+            <img src="/D2.jpg" width="250px"height="250px" alt="..." class="rounded-left">
+            <img src="/D3.jpg" width="250px"height="250px"alt="..." class="rounded-left">     
+            <p class="font-weight-bold"style="float:right;" >
+                1. Название работы-Сервопривод и двухосевой джойстик</br>
+                1.1 Состав набора:SG90 (2 штуки), KY-023, Arduino Uno</br>
+                
+                2. Цель работы</br>
+                Целью работы является приобретение практических навыков управления сервоприводами </br>
+                и получения опыта регистрации манипуляций с двухосевом джойстиком.</br>
+                3. Задачи работы:</br>
+                Ознакомиться с методами получения реакции с двухосевого джойстика KY-023.</br>
+                Ознакомиться со способами управления сервоприводами CG90.</br>
+                Создать алгоритм работы программ в соответствии с заданиями пункта 6.</br>
+                Написать код программ по заданному алгоритму в пункте 3.</br></br></br></br>
+                6. Задания к лабораторным работам</br>
+                ЗАДАНИЕ 3.1</br>
+                Вывести в Serial monitor величину отклонения KY-023 </br>
+                по координате X Вывести в Serial monitor величину отклонения KY-023 по координате Y</br>
+                Вывести в Serial monitor реакцию на нажатие на KY-023</br>
+
+                ЗАДАНИЕ 3.2</br>
+                Установить SG90/1 в произвольный угол и вернуть его в исходное положение</br>
+                Установить SG90/2 в произвольный угол и вернуть его в исходное положение</br>
+
+                ЗАДАНИЕ 3.3
+                Реализовать изменение угла поворота SG90/1 пропорционально </br>
+                отклонению KY-023 по оси X. При небольшом отклонении KY-023 </br>
+                по оси X в одну сторону угол должен медленно увеличиваться. </br>
+                При большем отклонении KY-023 по оси X в одну сторону угол должен увеличиваться быстрее. </br>
+                При отклонении KY-023 по оси X в обратную сторону – угол должен уменьшаться на величину, </br>
+                пропорциональную отклонению KY-023.</br>
+                Реализовать подобным образом поворот SG90/2 в соответствие с отклонением KY-023 по оси Y</br>
+
+                ЗАДАНИЕ 3.4</br>
+                К пункту 3.3 добавить установку обоих SG90 в нулевое положение при нажатии на KY-023</br>
+                 
+    
+    
+                
+                
+                
+                
+                
+                
+                </p>  
+        </div>
+    
+       <div>
+         
+        <p class="font-weight-bold" >Схема подключения</p>
+        <img src="/Foto/3.png" width="800px"height="450px"alt="..." class="rounded-left"> 
+       </div>
+       
+
+
+    </main>
+    
+    <footer class="footer">
+
+      <div class="text-center p-3" >
+      
+        <a class="text-white" >© 2021 Copyright: Nikita Molokov</a>
+      </div>
+
+
+    </footer>
+
+
+ 
+
+
+</div>
+
+
+<!--//  Конец всего сайта  // -->
+</div>
+<script language="javascript" scr="js/jquery-3.5.1.slim.min.js"></script>
+<script language="javascript" scr="js/bootstrap.min.js"></script>
+<script language="javascript" scr="js/popper.min.js"></script>
+
+</body>
+</html>
