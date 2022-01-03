@@ -96,21 +96,7 @@ $row=$result->fetch_all(MYSQLI_ASSOC);
                 <li class="nav-item active">
                   <a class="nav-link" href="/SPLR08.HTML"><?php echo $row['7']['word'] ?> <span class="sr-only"></span></a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#"><?php echo $row['8']['word'] ?> <span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#"><?php echo $row['9']['word'] ?> <span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#"><?php echo $row['10']['word'] ?>  <span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#"><?php echo $row['11']['word'] ?> <span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#"><?php echo $row['12']['word'] ?> <span class="sr-only"></span></a>
-                </li>
+              
                 
                 <li class="ROWS" >
                   <a ><?php echo $row['13']['word'] ?><span class="sr-only"></span></a>
